@@ -1,13 +1,25 @@
 body {
-    margin-top: 160px;
+    margin-top: 130px;
     font-family: "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Georgia, tahoma, arial, simsun, "宋体";
-    /*font-family: "Georgia", "Xin Gothic", "Hiragino Sans GB", "Droid Sans Fallback", "Microsoft YaHei", sans-serif;*/
 }
 
 h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Georgia, tahoma, arial, simsun, "宋体";
 }
 
+.smart-header{
+ margin-top: 20px;
+}
+.smart-header-logo{
+    margin-top: 20px;
+}
+.smart-header-menu {
+    margin-top: 20px;
+}
+.smart-container{
+    margin: 0px auto;
+    min-height: 500px;
+}
 .navbar-smart {
     box-shadow: 0px 2px 2px #eee;
     min-height: 100px;
@@ -49,14 +61,14 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
 
 .smart-cate-nav .btn {
     padding: 0px !important;
+    width: 120px;
 }
 
 .btn-smartnar {
     color: #18bc9c !important;
     background-color: transparent !important;
     border: 0px;
-    font-size: 18px !important;
-
+    font-size: 24px !important;
 }
 
 .noselect {
@@ -126,9 +138,11 @@ a:focus {
 }
 
 a.logo {
-    font-size: 36px;
+    font-size: 40px;
     line-height: 100px;
     text-decoration: none;
+    display: block;
+    float: left;
 }
 
 .smaller a.logo {
@@ -208,7 +222,7 @@ a.logo img {
 .smart-artiles > li .point {
     position: absolute;
     font-size: 36px;
-    left: -180px;
+    left: -150px;
     font-family: Georgia;
     color: #aaa;
     text-align: right;
@@ -593,11 +607,11 @@ a.logo img {
     padding: 0px;
 }
 
-.yue a {
+.smart a {
     color: #18bc9c !important;
 }
 
-.yue b {
+.smart b {
     font-weight: normal !important;
     color: #18bc9c !important;
 }

@@ -11,13 +11,14 @@ exports.getConnection=function() {
  });
 }
 
-exports.query=function(strSql, callback) {
+exports.query=function(strSql, params, callback) {
   var conn = exports.getConnection();
   conn.connect();
   console.log('>>>start conn success');
-  conn.query(strSql, function(err, rows, fields) {
+  var query = conn.query(strSql, params, function(err, rows, fields) {
    if (err) throw err;
    callback(rows, fields);
   });
+  console.log('>>>sql:' + query.sql);
   conn.end();
 }
