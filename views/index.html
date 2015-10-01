@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Smart社区</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='/stylesheets/bootstrap.css'/>
+    <link rel='stylesheet' href='/stylesheets/app.css'/>
+</head>
+<body id="body">
+<div class="navbar navbar-fixed-top navbar-smart smaller" role="navigation" id="theheader">
+    <div class="container clearfix">
+
+        <a class="logo" href="/?c=default"><img style="display: none" src=""><span class="get">Smart</span>社区</a>
+
+        <div class="navbar-collapse collapse pull-right">
+            <ul class="smart-cate-nav">
+                <li class="dropdown   active  ">
+                    <button class="btn btn-smartnar dropdown-toggle" type="button" onclick="location='/?c=default'">
+                        新知
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li class=" active "><a href="/">全部</a></li>
+                        <li class="" role="presentation"><a href="/?cate=1" role="menuitem" tabindex="-1">技术</a></li>
+                        <li class="" role="presentation"><a href="/?cate=2" role="menuitem" tabindex="-1">设计</a></li>
+                        <li class="" role="presentation"><a href="/?cate=3" role="menuitem" tabindex="-1">产品</a></li>
+                        <li class="" role="presentation"><a href="/?cate=4" role="menuitem" tabindex="-1">创业</a></li>
+                        <li class=""><a href="/?a=kb">我的</a></li>
+                        <li class=""><a href="/?a=feed">我关注的</a></li>
+                        <li class=""><a href="/?a=submit" target="_blank">+添加新知</a></li>
+                    </ul>
+                </li>
+
+                <li class="dropdown  ">
+                    <button class="btn btn-smartnar dropdown-toggle" type="button" onclick="location='/?c=card'">
+                        卡片流
+                        <!--<span class="caret"></span>-->
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li class=""><a href="/?c=card">我的首页</a></li>
+                        <li class=""><a href="/?c=card&a=explore">随便看看</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown nosub  ">
+                    <button class="btn btn-smartnar dropdown-toggle" type="button" onclick="location='/?c=wiki'">
+                        百科
+                        <!--<span class="caret"></span>-->
+                    </button>
+
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li class=""><a href="/?c=wiki">百科首页</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown nosub  ">
+                    <button class="btn btn-smartnar dropdown-toggle" type="button" onclick="location='/?c=forum'">
+                        讨论区
+                    </button>
+
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li class=""><a href="/?c=forum">首页</a></li>
+                    </ul>
+                </li>
+
+
+                <li class="dropdown nosub   ">
+                    <button class="btn btn-smartnar dropdown-toggle" type="button" onclick="location='/?c=gold'">
+                        积分
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li class=""><a href="/?c=gold&a=task">任务系统</a></li>
+                        <li class=""><a href="/?c=gold&a=shop">礼品兑换</a></li>
+                        <li class=""><a href="/?c=gold&a=top">排行榜单</a></li>
+                    </ul>
+                </li>
+
+
+            </ul>
+        </div>
+
+
+    </div>
+</div>
+
+<div class="container">
+
+    <div class="row row-offcanvas row-offcanvas-right">
+        <div class="col-xs-12 col-sm-9">
+            <ul class="smart-artiles" id="galist">
+                <% for(var i=0; i<data.length; i++) {%>
+                    <li>
+                        <div class="point">+<%=data[i].hits%></div>
+                        <div class="avatar"><img src="" class="avatar"/>
+                        </div>
+                        <div class="card">
+                            <h2><a href="#" target="_blank"><%=data[i].title%></a></h2>
+                            <div>
+                                <ul class="actions">
+                                    <li><time class="timeago"><%=data[i].createDate%></time></li>
+                                    <li class="tauthor">
+                                        <a href="#" target="_blank" class="get">Sky</a>
+                                    </li>
+                                    <li><a href="#" class="kblink-8007">+收藏</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                <% } %>
+            </ul>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
