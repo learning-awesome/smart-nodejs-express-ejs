@@ -2,7 +2,7 @@
 <div class="container smart-container">
     <div class="row row-offcanvas row-offcanvas-right">
         <div class="col-xs-12 col-sm-9">
-            <ul class="smart-artiles" id="galist">
+            <ul class="smart-artiles" id="articleList">
                 <% for(var i=0; i<data.length; i++) {%>
                     <li>
                         <div class="point">+<%=data[i].hits%></div>
@@ -21,7 +21,20 @@
                     </li>
                 <% } %>
             </ul>
+            <div id="pagerBottom" class="smart-pager"></div>
         </div>
     </div>
 </div>
 <% include template/default/footer.html %>
+<script type="text/javascript" src="/javascripts/components/xhr.js"></script>
+<script type="text/javascript" src="/javascripts/components/pager.js"></script>
+<script>
+    var pager = new Pager({pageIndex: 2, defaultBottomHeight: 60});
+    pager.init(function (successCallback) {
+        XHR.get('/article/page/' + pager.pageIndex + '/' + pager.pageSize,{}, function(responseText){
+            var articleList =  document.getElementById('articleList');
+            articleList.innerHTML+=responseText;
+            successCallback(responseText=='');
+        });
+    });
+</script>

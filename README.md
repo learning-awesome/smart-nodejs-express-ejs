@@ -1,4 +1,4 @@
-## Node.js + express + ejs + mysql 服务器渲染
+## Node.js + express + ejs + mysql web应用开发
 
 npm install -g express
 
@@ -23,3 +23,18 @@ supervisor ./bin/www
 
 支持es6语法
 node --harmony app.js
+
+
+
+## NPM国内镜像
+
+http://npm.hacknodejs.com/
+
+http://registry.npmjs.vitecho.com/
+
+https://registry.npm.taobao.org
+ 
+
+永久使用镜像命令： 
+
+npm config set registry https://registry.npm.taobao.org

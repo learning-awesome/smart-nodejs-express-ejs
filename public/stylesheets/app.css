@@ -7,19 +7,32 @@ h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
     font-family: "Hiragino Sans GB", "Microsoft YaHei", "微软雅黑", Georgia, tahoma, arial, simsun, "宋体";
 }
 
-.smart-header{
- margin-top: 20px;
+.smart-pager {
+    font-size: 20px;
+    color: lightgray;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    vertical-align: middle
 }
-.smart-header-logo{
+
+.smart-header {
     margin-top: 20px;
 }
+
+.smart-header-logo {
+    margin-top: 20px;
+}
+
 .smart-header-menu {
     margin-top: 20px;
 }
-.smart-container{
+
+.smart-container {
     margin: 0px auto;
     min-height: 500px;
 }
+
 .navbar-smart {
     box-shadow: 0px 2px 2px #eee;
     min-height: 100px;

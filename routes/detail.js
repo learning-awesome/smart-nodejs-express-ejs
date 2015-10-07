@@ -1,9 +1,9 @@
 var express = require('express');
-var Note = require('../model/Note');
+var Article = require('../model/article');
 var router = express.Router();
 var ejs = require('ejs');
 ejs.filters.formatHtml = function(html) {
-  return html.replace(/\r\n/gi, '<br/>') ;
+  return html&&html.replace(/\r\n/gi, '<br/>') ;
 };
 
 router.param('id', function (req, res, next, id) {
@@ -22,7 +22,7 @@ router.param('id', function (req, res, next, id) {
 });
 
 router.get('/:id', function (req, res) {
-  Note.detail(req.params.id, function (result) {
+  Article.detail(req.params.id, function (result) {
     res.render('detail', {data: result});
   });
 });

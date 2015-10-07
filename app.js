@@ -9,6 +9,10 @@ var routes = require('./routes/index');
 var user = require('./routes/user');
 var detail = require('./routes/detail');
 
+// 全局变量
+global.message = require('./utils/message').instance();
+
+// 启动express
 var app = express();
 
 // view engine setup
